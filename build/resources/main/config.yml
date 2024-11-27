@@ -1,0 +1,664 @@
+# 修仙插件配置文件
+
+# 渡劫設置
+tribulation:
+  # 渡劫/突破失敗後的冷卻時間設定
+  cooldown:
+    # 各境界的冷卻時間（小時）
+    MORTAL: 0.5
+    LIANQI: 1
+    FOUNDATION_ESTABLISHMENT: 1.5
+    GOLDEN_CORE: 2
+    NASCENT_SOUL: 2.5
+    SPIRIT_SEVERING: 3
+    VOID_TRAINING: 3.5
+    INTEGRATION: 4
+    GREAT_VEHICLE: 4.5
+    TRIBULATION: 5
+  
+  # 各境界渡劫設定
+  realms:
+    # 金丹期渡劫
+    GOLDEN_CORE:
+      lightning-strikes: 3
+      duration: 30
+      strike-interval: 3
+      damage:
+        base: 4.0
+        random-range: 0.2
+    
+    # 元嬰期渡劫
+    NASCENT_SOUL:
+      lightning-strikes: 5
+      duration: 45
+      strike-interval: 3
+      damage:
+        base: 6.0
+        random-range: 0.2
+    
+    # 化神期渡劫
+    SPIRIT_SEVERING:
+      lightning-strikes: 7
+      duration: 60
+      strike-interval: 2.5
+      damage:
+        base: 8.0
+        random-range: 0.2
+    
+    # 煉虛期渡劫
+    VOID_TRAINING:
+      lightning-strikes: 9
+      duration: 75
+      strike-interval: 2.5
+      damage:
+        base: 10.0
+        random-range: 0.2
+    
+    # 合體期渡劫
+    INTEGRATION:
+      lightning-strikes: 12
+      duration: 90
+      strike-interval: 2
+      damage:
+        base: 12.0
+        random-range: 0.2
+    
+    # 大乘期渡劫
+    GREAT_VEHICLE:
+      lightning-strikes: 15
+      duration: 120
+      strike-interval: 2
+      damage:
+        base: 15.0
+        random-range: 0.2
+    
+    # 渡劫期渡劫
+    TRIBULATION:
+      lightning-strikes: 20
+      duration: 180
+      strike-interval: 1.5
+      damage:
+        base: 20.0
+        random-range: 0.2
+
+# 境界設置
+realms:
+  # 是否在突破時廣播消息
+  broadcast-breakthrough: true
+  
+  # 是否允許查看其他玩家的境界
+  allow-view-others: true
+  
+  # 排行榜顯示的玩家數量
+  top-list-size: 10
+
+  # 突破成功率設定 (百分比)
+  breakthrough_rates:
+    MORTAL: 100  # 凡人突破到煉氣期
+    LIANQI: 90   # 煉氣突破到築基期
+    FOUNDATION_ESTABLISHMENT: 80  # 築基突破到金丹期
+    GOLDEN_CORE: 70  # 金丹突破到元嬰期
+    NASCENT_SOUL: 60  # 元嬰突破到化神期
+    SPIRIT_SEVERING: 50  # 化神突破到煉虛期
+    VOID_TRAINING: 40  # 煉虛突破到合體期
+    INTEGRATION: 30  # 合體突破到大乘期
+
+  # 各境界靈氣需求
+  requirements:
+    # 凡人
+    MORTAL:
+      - 100
+    # 煉氣期 (1-3層)
+    LIANQI:
+      - 100
+      - 300
+      - 600
+    # 築基期 (1-6層)
+    FOUNDATION_ESTABLISHMENT:
+      - 1200
+      - 1800
+      - 2600
+      - 3600
+      - 4800
+      - 6200
+    # 金丹期 (1-6層)
+    GOLDEN_CORE:
+      - 8000
+      - 10000
+      - 12500
+      - 15500
+      - 19000
+      - 23000
+    # 元嬰期 (1-9層)
+    NASCENT_SOUL:
+      - 30000
+      - 36000
+      - 43000
+      - 51000
+      - 60000
+      - 70000
+      - 81000
+      - 93000
+      - 106000
+    # 化神期 (1-9層)
+    SPIRIT_SEVERING:
+      - 120000
+      - 140000
+      - 165000
+      - 195000
+      - 230000
+      - 270000
+      - 315000
+      - 365000
+      - 420000
+    # 煉虛期 (1-18層)
+    VOID_TRAINING:
+      - 500000
+      - 540000
+      - 580000
+      - 620000
+      - 670000
+      - 720000
+      - 780000
+      - 850000
+      - 930000
+      - 1020000
+      - 1120000
+      - 1230000
+      - 1350000
+      - 1480000
+      - 1620000
+      - 1770000
+      - 1930000
+      - 2100000
+    # 合體期 (1-18層)
+    INTEGRATION:
+      - 2000000
+      - 2100000
+      - 2220000
+      - 2350000
+      - 2490000
+      - 2640000
+      - 2800000
+      - 2970000
+      - 3150000
+      - 3340000
+      - 3540000
+      - 3750000
+      - 3970000
+      - 4200000
+      - 4440000
+      - 4690000
+      - 4950000
+      - 5220000
+    # 大乘期 (1-33層)
+    GREAT_VEHICLE:
+      - 5500000
+      - 5800000
+      - 6100000
+      - 6400000
+      - 6700000
+      - 7000000
+      - 7300000
+      - 7600000
+      - 7900000
+      - 8200000
+      - 8500000
+      - 8800000
+      - 9100000
+      - 9400000
+      - 9700000
+      - 10000000
+      - 10300000
+      - 10600000
+      - 10900000
+      - 11200000
+      - 11500000
+      - 11800000
+      - 12100000
+      - 12400000
+      - 12700000
+      - 13000000
+      - 13300000
+      - 13600000
+      - 13900000
+      - 14200000
+      - 14500000
+      - 14800000
+      - 15100000
+    # 渡劫期 (1-36層)
+    TRIBULATION:
+      - 15500000
+      - 16000000
+      - 16500000
+      - 17000000
+      - 17500000
+      - 18000000
+      - 18500000
+      - 19000000
+      - 19500000
+      - 20000000
+      - 20500000
+      - 21000000
+      - 21500000
+      - 22000000
+      - 22500000
+      - 23000000
+      - 23500000
+      - 24000000
+      - 24500000
+      - 25000000
+      - 25500000
+      - 26000000
+      - 26500000
+      - 27000000
+      - 27500000
+      - 28000000
+      - 28500000
+      - 29000000
+      - 29500000
+      - 30000000
+      - 30500000
+      - 31000000
+      - 31500000
+      - 32000000
+      - 32500000
+      - 33000000
+
+# 生態域靈氣設定
+biomes:
+  # 高靈氣濃度生態域 (40-60)
+  high_spiritual:
+    LUSH_CAVES:
+      min: 55
+      max: 60
+    CHERRY_GROVE:
+      min: 45
+      max: 55
+    BAMBOO_JUNGLE:
+      min: 40
+      max: 50
+      
+  # 中等靈氣濃度生態域 (20-39)
+  medium_spiritual:
+    FOREST:
+      min: 28
+      max: 35
+    FLOWER_FOREST:
+      min: 30
+      max: 38
+    BIRCH_FOREST:
+      min: 25
+      max: 32
+    DARK_FOREST:
+      min: 20
+      max: 28
+    OLD_GROWTH_BIRCH_FOREST:
+      min: 27
+      max: 34
+    OLD_GROWTH_PINE_TAIGA:
+      min: 25
+      max: 32
+    OLD_GROWTH_SPRUCE_TAIGA:
+      min: 27
+      max: 34
+    TAIGA:
+      min: 22
+      max: 29
+    SWAMP:
+      min: 20
+      max: 27
+    JUNGLE:
+      min: 25
+      max: 32
+    SPARSE_JUNGLE:
+      min: 23
+      max: 30
+    SAVANNA:
+      min: 25
+      max: 32
+    SAVANNA_PLATEAU:
+      min: 23
+      max: 30
+    WINDSWEPT_HILLS:
+      min: 30
+      max: 37
+    WINDSWEPT_GRAVELLY_HILLS:
+      min: 28
+      max: 35
+    SNOWY_PLAINS:
+      min: 20
+      max: 27
+    SNOWY_TAIGA:
+      min: 22
+      max: 29
+    JAGGED_PEAKS:
+      min: 32
+      max: 39
+    FROZEN_PEAKS:
+      min: 30
+      max: 37
+    SNOWY_SLOPES:
+      min: 28
+      max: 35
+    GROVE:
+      min: 25
+      max: 32
+      
+  # 低靈氣濃度生態域 (1-19)
+  low_spiritual:
+    PLAINS:
+      min: 10
+      max: 15
+    SUNFLOWER_PLAINS:
+      min: 12
+      max: 17
+    DESERT:
+      min: 1
+      max: 8
+    BADLANDS:
+      min: 3
+      max: 10
+    ERODED_BADLANDS:
+      min: 1
+      max: 8
+    WOODED_BADLANDS:
+      min: 5
+      max: 12
+      
+  # 水域生態域
+  ocean:
+    WARM_OCEAN:
+      min: 20
+      max: 27
+    LUKEWARM_OCEAN:
+      min: 22
+      max: 29
+    DEEP_LUKEWARM_OCEAN:
+      min: 20
+      max: 27
+    DEEP_OCEAN:
+      min: 22
+      max: 29
+    COLD_OCEAN:
+      min: 20
+      max: 27
+    FROZEN_OCEAN:
+      min: 22
+      max: 29
+      
+  # 特殊生態域（無靈氣）
+  special:
+    NETHER_WASTES:
+      min: 0
+      max: 0
+    CRIMSON_FOREST:
+      min: 0
+      max: 0
+    WARPED_FOREST:
+      min: 0
+      max: 0
+    SOUL_SAND_VALLEY:
+      min: 0
+      max: 0
+    BASALT_DELTAS:
+      min: 0
+      max: 0
+    THE_END:
+      min: 0
+      max: 0
+    END_HIGHLANDS:
+      min: 0
+      max: 0
+    END_MIDLANDS:
+      min: 0
+      max: 0
+    SMALL_END_ISLANDS:
+      min: 0
+      max: 0
+    END_BARRENS:
+      min: 0
+      max: 0
+
+# 靈氣吸收加成設定 (使用百分比)
+spiritual_bonus:
+  # 凡人
+  MORTAL:
+    - "0%"
+  # 煉氣期 (1-3層)
+  LIANQI:
+    - "5%"
+    - "6%"
+    - "7%"
+  #  (1-6層)
+  FOUNDATION_ESTABLISHMENT:
+    - "10%"
+    - "12%"
+    - "14%"
+    - "16%"
+    - "18%"
+    - "20%"
+  # 金丹期 (1-6層)
+  GOLDEN_CORE:
+    - "20%"
+    - "23%"
+    - "26%"
+    - "29%"
+    - "32%"
+    - "35%"
+  # 元嬰期 (1-9層)
+  NASCENT_SOUL:
+    - "35%"
+    - "38%"
+    - "41%"
+    - "44%"
+    - "47%"
+    - "50%"
+    - "53%"
+    - "56%"
+    - "59%"
+  # 化神期 (1-9層)
+  SPIRIT_SEVERING:
+    - "60%"
+    - "64%"
+    - "68%"
+    - "72%"
+    - "76%"
+    - "80%"
+    - "84%"
+    - "88%"
+    - "92%"
+  # 煉虛期 (1-18層)
+  VOID_TRAINING:
+    - "90%"
+    - "93%"
+    - "96%"
+    - "99%"
+    - "102%"
+    - "105%"
+    - "108%"
+    - "111%"
+    - "114%"
+    - "117%"
+    - "120%"
+    - "123%"
+    - "126%"
+    - "129%"
+    - "132%"
+    - "135%"
+    - "138%"
+    - "141%"
+  # 合體期 (1-18層)
+  INTEGRATION:
+    - "140%"
+    - "144%"
+    - "148%"
+    - "152%"
+    - "156%"
+    - "160%"
+    - "164%"
+    - "168%"
+    - "172%"
+    - "176%"
+    - "180%"
+    - "184%"
+    - "188%"
+    - "192%"
+    - "196%"
+    - "200%"
+    - "204%"
+    - "208%"
+  # 大乘期 (1-33層)
+  GREAT_VEHICLE:
+    - "200%"
+    - "205%"
+    - "210%"
+    - "215%"
+    - "220%"
+    - "225%"
+    - "230%"
+    - "235%"
+    - "240%"
+    - "245%"
+    - "250%"
+    - "255%"
+    - "260%"
+    - "265%"
+    - "270%"
+    - "275%"
+    - "280%"
+    - "285%"
+    - "290%"
+    - "295%"
+    - "300%"
+    - "305%"
+    - "310%"
+    - "315%"
+    - "320%"
+    - "325%"
+    - "330%"
+    - "335%"
+    - "340%"
+    - "345%"
+    - "350%"
+    - "355%"
+    - "360%"
+  # 渡劫期 (1-36層)
+  TRIBULATION:
+    - "350%"
+    - "356%"
+    - "362%"
+    - "368%"
+    - "374%"
+    - "380%"
+    - "386%"
+    - "392%"
+    - "398%"
+    - "404%"
+    - "410%"
+    - "416%"
+    - "422%"
+    - "428%"
+    - "434%"
+    - "440%"
+    - "446%"
+    - "452%"
+    - "458%"
+    - "464%"
+    - "470%"
+    - "476%"
+    - "482%"
+    - "488%"
+    - "494%"
+    - "500%"
+    - "506%"
+    - "512%"
+    - "518%"
+    - "524%"
+    - "530%"
+    - "536%"
+    - "542%"
+    - "548%"
+    - "554%"
+    - "560%"
+
+# 消息設定
+messages:
+  # 一般消息
+  general:
+    no_permission: "&c你沒有權限使用此指令！"
+    player_only: "&c只有玩家才能使用指令！"
+    player_not_found: "&c找不到該玩家！"
+    data_load_error: "&c無法獲取境界信息！"
+    
+  # 突破相關消息
+  breakthrough:
+    confirm_title: "&6===== 突破確認 ====="
+    next_realm: "&e即將突破到%next_realm%期"
+    success_rate: "&e突破成功率: &a%rate%%"
+    required_power: "&e需要消耗靈氣: &a%amount%"
+    need_tribulation: "&c注意：突破成功後需要渡劫！"
+    confirm_wait: "&e請再次輸入突破指令確認突破！"
+    confirm_timeout: "&7(確認有效期為30秒)"
+    insufficient_power: |
+      &c靈氣不足，無法突破！
+      &c需要再吸收 %amount% 靈氣值
+    cooldown_active: "&c突破失敗後需要休息！還需等待: %hours%小時"
+    breakthrough_failed: "&c突破失敗！"
+    current_rate: "&e當前境界突破成功率: &c%rate%%"
+    cooldown_notice: "&c需要等待%hours%小時後才能再次嘗試。"
+    success_broadcast: |
+      &6==== 天道 ====
+      &e恭喜修士 &f%player% &e突破成功！
+    
+  # 渡劫相關消息
+  tribulation:
+    title: "&6==== 天劫降臨 ===="
+    start_notice: "&6天機已至，天劫降臨！"
+    outdoor_required: "&c渡劫必須在露天場所進行！"
+    duration_notice: "&c天劫已至，需在 %duration% 秒內承受天劫洗禮！"
+    strikes_notice: "&c將有 %strikes% 道天雷降下，望道友謹慎應對！"
+    progress: "&e已渡過 %current%/%total% 道天雷"
+    rule_violation: "&c你違反了天道規則，渡劫失敗！"
+    failure_notice: "&c渡劫失敗！需要等待%hours%小時後才能再次嘗試。"
+    success_broadcast: |
+      &6==== 天道 ====
+      &e恭喜修士 &f%player% &e成功渡過天劫，突破境界！
+    
+  # 打坐相關消息
+  meditation:
+    already_meditating: "&c你已經在打坐了！"
+    start: "&6你開始打坐修煉..."
+    stop: "&6你結束了打坐。"
+    density: "&e當前位置靈氣濃度: &a%density%"
+    realm_bonus: "&e境界加成: &a%bonus%%"
+    gain_rate: "&e每秒獲得靈氣: &a%amount%"
+    
+  # 境界相關消息
+  realm:
+    current_realm: |
+      &6===== 境界信息 =====
+      &e當前境界: &a%realm%
+      &e當前靈氣: &a%power%
+    next_requirement: "&e突破所需靈氣: &a%amount%"
+    cultivation_progress: "&e修煉進度: &a%progress%%"
+    top_list_title: "&6===== 境界排行榜 ====="
+    top_list_format: "&e#%rank% &f%player% - &a%realm%"
+    other_player_realm: |
+      &6===== %player% 的境界信息 =====
+      &e當前境界: &a%realm%
+      &e當前靈氣: &a%power%
+
+  # 幫助信息
+  help:
+    title: "&6========= 修仙插件指令說明 ========="
+    realm_title: "&e【境界相關指令】"
+    realm_commands: |
+      &f/realm, /境界 &7- 查看當前境界
+      &f/realm info/查詢 <玩家名稱> &7- 查看其他玩家的境界
+      &f/realm top/排行 &7- 查看境界排行榜
+      &f/realm breakthrough/突破 &7- 嘗試突破境界
+    meditation_title: "&e【打坐相關指令】"
+    meditation_commands: "&f/meditate, /打坐 &7- 開始或停止打坐"
+    realm_info_usage: "&c用法: /realm info <玩家名稱> 或 /realm 查詢 <玩家名稱>"
+    realm_unknown_command: "&c未知的指令！使用方法："

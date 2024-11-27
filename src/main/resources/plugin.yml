@@ -1,0 +1,31 @@
+name: immortal
+version: '1.0'
+main: com.bird.immortal.Immortal
+api-version: '1.21'
+authors: [ bird ]
+description: 修仙插件 - 在 Minecraft 中體驗修仙的樂趣
+
+commands:
+  realm:
+    description: 境界相關指令
+    usage: "§e===== 境界指令說明 =====\n§f/<command> §7- 查看當前境界\n§f/<command> info/查詢 <玩家名稱> §7- 查看其他玩家的境界\n§f/<command> top/排行 §7- 查看境界排行榜\n§f/<command> breakthrough/突破 §7- 嘗試突破境界"
+    aliases: [境界]
+  meditate:
+    description: 打坐修煉指令
+    usage: "§f/<command> §7- 開始或停止打坐"
+    aliases: [打坐]
+  immortal:
+    description: 插件管理指令
+    usage: "§e===== 插件指令說明 =====\n§f/<command> help/幫助 §7- 查看詳細指令說明"
+    aliases: [修仙]
+
+permissions:
+  immortal.realm:
+    description: 允許使用境界相關指令
+    default: true
+  immortal.meditate:
+    description: 允許使用打坐指令
+    default: true
+  immortal.help:
+    description: 允許使用幫助指令
+    default: true
